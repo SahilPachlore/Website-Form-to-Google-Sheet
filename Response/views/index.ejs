@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>  
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Video Request</h1>
+    <form id="myForm" action="" method="POST">
+      <div>
+        <label for="request">Request</label>
+        <textarea name="request" id="request" cols="30" rows="10"></textarea>
+      </div>
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name"/>
+      </div>
+      <button type="submit" onclick="clickevt();">Submit</button>
+    </form>
+      <script>
+        function clickevt()
+        {
+          var flag=confirm("Successfully submitted!");
+          setTimeout(function()
+          {
+                  if(flag===true)
+              {
+                document.getElementById('request').value='';
+                document.getElementById('name').value='';
+              }
+          },100);
+        }
+        </script>
+  </body>
+</html>
